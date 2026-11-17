@@ -15,45 +15,50 @@ html,body{margin:0;width:100%;min-height:100%;font-family:"DM Sans",Arial,sans-s
 body{min-height:100svh;background:#071016;color:#fff;overflow:hidden}
 .stage{position:relative;isolation:isolate;min-height:100svh;height:100svh;width:100%;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .stage:before{content:"";position:absolute;inset:0;z-index:-2;background:url("assets/profile.jpg") center 43%/cover no-repeat;transform:scale(1.015)}
-.stage:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(3,8,13,.30) 0%,rgba(3,8,13,.17) 34%,rgba(3,8,13,.55) 68%,rgba(3,8,13,.78) 100%)}
+.stage:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(3,8,13,.25) 0%,rgba(3,8,13,.10) 38%,rgba(3,8,13,.48) 72%,rgba(3,8,13,.78) 100%)}
 .content{width:min(100%,520px);height:100%;min-height:620px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:env(safe-area-inset-top) 22px env(safe-area-inset-bottom);position:relative}
+.identity{transform:translateY(10vh);width:100%}
 .name{font-family:"Great Vibes",cursive;font-size:clamp(42px,10vw,64px);line-height:1.1;font-weight:400;text-shadow:0 2px 12px #000b;margin:0 0 16px;white-space:nowrap}
 .role{font-family:"Great Vibes",cursive;font-size:clamp(27px,7vw,39px);line-height:1.2;margin:0;text-shadow:0 2px 10px #000b}
-.rule{width:min(78%,350px);height:2px;background:#49e9ee;box-shadow:0 0 12px #49e9ee;margin:clamp(72px,14vh,118px) 0 clamp(76px,13vh,112px)}
+.rule{width:min(78%,350px);height:2px;background:#49e9ee;box-shadow:0 0 12px #49e9ee;margin:clamp(65px,12vh,105px) 0 clamp(65px,12vh,105px)}
 .contact{font-family:"Great Vibes",cursive;font-size:clamp(25px,6vw,34px);margin:0 0 22px;text-shadow:0 2px 8px #000b}
 .links{display:flex;align-items:center;justify-content:center;gap:clamp(18px,5vw,34px)}
-.link{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;text-decoration:none;color:#07313a;background:rgba(91,245,245,.92);box-shadow:0 5px 18px #001c2580;transition:transform .2s,background .2s}
-.link:nth-child(2){background:rgba(224,251,250,.94)}
-.link:nth-child(3){background:rgba(91,245,245,.92)}
-.link:nth-child(4){background:rgba(224,251,250,.94)}
+.link{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;text-decoration:none;color:#07313a;background:rgba(91,245,245,.94);box-shadow:0 5px 18px #001c2580;transition:transform .2s,background .2s}
+.link:nth-child(2){background:rgba(224,251,250,.96)}
+.link:nth-child(3){background:rgba(91,245,245,.94)}
+.link:nth-child(4){background:rgba(224,251,250,.96)}
 .link:active{transform:scale(.94)}
 .link svg{width:29px;height:29px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cv-label{font-size:17px;font-weight:800;letter-spacing:-.5px;border:2px solid currentColor;padding:4px 5px;line-height:1}
 .linkedin{font-size:27px;font-weight:800;letter-spacing:-2px}
 .hint{font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:18px;color:#e7ffff;text-shadow:0 1px 6px #000}
 @media(min-width:700px){
  body{background:#e8e8e8;display:grid;place-items:center;padding:24px}
  .stage{width:min(100%,430px);height:min(900px,calc(100svh - 48px));min-height:650px;border-radius:42px;box-shadow:0 22px 70px #0005}
- .stage:before{border-radius:42px}
- .stage:after{border-radius:42px}
+ .stage:before,.stage:after{border-radius:42px}
 }
 @media(max-height:700px){
- .rule{margin-top:8vh;margin-bottom:8vh}
+ .identity{transform:translateY(6vh)}
+ .rule{margin-top:7vh;margin-bottom:7vh}
  .link{width:54px;height:54px}
 }
+@media(max-width:370px){.name{font-size:39px}.links{gap:14px}.link{width:56px;height:56px}}
 </style>
 </head>
 <body>
 <main class="stage">
   <section class="content" aria-label="Ahmed Fath Elpap digital contact card">
-    <h1 class="name">Ahmed Fath Elpap</h1>
-    <p class="role">Data Analyst</p>
+    <div class="identity">
+      <h1 class="name">Ahmed Fath Elpap</h1>
+      <p class="role">Data Analyst</p>
+    </div>
     <div class="rule" aria-hidden="true"></div>
     <p class="contact">contact with me</p>
     <nav class="links" aria-label="Contact and profile links">
       <a class="link" href="assets/Ahmed_Fath_Elpap_CV.pdf" target="_blank" rel="noopener" aria-label="Open my CV" title="CV">
-        <svg viewBox="0 0 24 24"><path d="M6 2.8h8l4 4V21H6z"/><path d="M14 2.8V7h4M9 11h6M9 14h6M9 17h4"/><path d="M3 6v15"/></svg>
+        <span class="cv-label">CV</span>
       </a>
-      <a class="link" href="https://drive.google.com/drive/folders/1TozIdsjyPAEOXpIKjJ9UJ5Adk5GVfxfH" target="_blank" rel="noopener" aria-label="View my projects" title="Projects">
+      <a class="link" href="assets/graduation-project-infographic.jpg" target="_blank" rel="noopener" aria-label="View graduation project infographic" title="Graduation Project Infographic">
         <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m4 17 5-5 3 3 3-4 5 6"/></svg>
       </a>
       <a class="link" href="https://www.linkedin.com/in/ahmed-fath-elpap-mohamed/" target="_blank" rel="noopener" aria-label="Open LinkedIn" title="LinkedIn"><span class="linkedin">in</span></a>
